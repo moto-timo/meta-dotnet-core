@@ -19,14 +19,14 @@ This layer depends on:
 
 URI | Layers | Branch
 --- | ------ | ------
-git://git.openembedded.org/bitbake | | thud
-git://git.openembedded.org/openembedded-core | meta | thud
-git://git.yoctoproject.org/meta | meta | thud
-git://git.openembedded.org/meta-openembedded | meta-oe | thud
-git://git.openembedded.org/meta-openembedded | meta-perl | thud
-git://git.openembedded.org/meta-openembedded | meta-python | thud
-git://git.openembedded.org/meta-openembedded | meta-networking | thud
-git://git.yoctoproject.org/meta-security | meta-security | thud
+git://git.openembedded.org/bitbake | | honister
+git://git.openembedded.org/openembedded-core | meta | honister
+git://git.yoctoproject.org/meta | meta | honister
+git://git.openembedded.org/meta-openembedded | meta-oe | honister
+git://git.openembedded.org/meta-openembedded | meta-perl | honister
+git://git.openembedded.org/meta-openembedded | meta-python | honister
+git://git.openembedded.org/meta-openembedded | meta-networking | honister
+git://git.yoctoproject.org/meta-security | meta-security | honister
 
 ## Patches
 Please submit any patches against this layer using pull requests in github or open up an issue.
@@ -54,7 +54,7 @@ Assuming the meta-dotnet-core layer exists at the top-level of your yocto build 
 The following must be added to your local.conf file to enable specific support that is required in curl for 2.x and 3.x versions of .Net Core:
 
 ```
-  PACKAGECONFIG_pn-curl = "vers krb5 ssl zlib ipv6"
+  PACKAGECONFIG:pn-curl = "vers krb5 ssl zlib ipv6"
 ```
 
 NOTE: this layer will modify the curl library to contain the CURL_OPENSSL_3 versioned symbols. If .Net 5.x or 6.x is targetted then this bbappend can be disabled.
